@@ -30,7 +30,7 @@
         我也是div
     </div>
     <div>
-        我也是div
+         <span style="color:blueviolet">我还是div</span>gagaga
     </div>
     <span>
         Ar22
@@ -42,11 +42,11 @@
         Arya
         Arya11
     </span>
-    <!-- 行级元素 多个占一行
-         块级元素 自己占一行 -->
+    <!-- 行级元素 多个占一行 不能设置宽高 a  span label strong b
+         块级元素 自己占一行 可以设置宽高 h1 p ul li ol div table -->
     <table border="1">
         <tr>
-            <td>11</td>
+            <td>11</td> 
             <td>22</td>
             <td>33</td>
         </tr>
@@ -56,5 +56,32 @@
             <td>33</td>
         </tr>
     </table>
+    <form action="">
+        <div>
+             <label for="11">用户名：</label><input id="11" type="text">
+        </div>
+        <br>
+        <div>
+            <label for="22">密码：</label><input id="22" type="password">
+        </div>
+        <!-- 单选框 -->
+        <input type="radio" name="sex">男
+        <input type="radio" name="sex">女
+        <br>
+        <!-- 复选框 -->
+        <input type="checkbox" name="hobby">足球
+        <input type="checkbox" name="hobby">篮球
+        <input type="checkbox" name="hobby">羽毛球
+        <!-- 下拉框 -->
+        <select>
+            <option value="">15级</option>
+            <option value="">16级</option>
+            <option value="">17级</option>     
+        </select>
+        <!-- 文本域 -->
+        <textarea name="" id="" cols="10" rows="1"></textarea>
+        <button>提交</button>
+        <input type="submit" value="提交表单">
+    </form>
 </body>
 </html> 

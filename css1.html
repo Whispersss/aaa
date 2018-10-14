@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>皮皮的css第一次测试</title>
+    <!-- id选择器 -->
+    <style>
+          #div1{
+              width: 100px;
+              height: 100px;
+              color: pink;
+              background: yellow;
+
+          }
+    /* 标签选择器 */
+    div{
+        color: dodgerblue;
+    }
+    /* class选择器 */
+    .QQQ{
+        width: 200px;
+        height: 200px;
+        color: darkorchid;
+        background: pink;
+    }
+    .ll{
+        background:pink;
+    }
+    /* 后代选择器 */
+    div span{
+        color:darkred;
+    }
+    /* 分组选择器 */
+     p,ul{
+         background: greenyellow;
+     }
+    </style>
+</head>
+<body>
+    <div id="div1">111</div>
+    <div>222</div>
+    <div>333</div>
+
+    <div class="QQQ">444</div>
+    <div class="QQQ">555</div>
+    <div>666</div>
+
+    <div>
+        <span>OAO</span>
+        <a href="http:www.baidu.com">百度一下，你就知道</a>
+        <span>OvO</span>
+        <P>
+            whispersss <span>Zed1111</span>
+        </P>
+    </div>
+    <span>Zed</span>
+    <ul id="ul1">
+        <li>RR</li>
+        <li class="ll">DD</li>
+        <li class="ll">FF</li>
+
+    </ul>
+</body>
+</html>
