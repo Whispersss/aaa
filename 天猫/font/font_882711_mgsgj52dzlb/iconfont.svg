@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="tel" unicode="&#58945;" d="M776.676-114.080h-479.92c-28.332 0-51.33 22.999-51.33 51.33v891.12c0 28.332 22.999 51.33 51.33 51.33h479.92c28.332 0 51.33-22.999 51.33-51.33v-891.12c0-28.332-22.999-51.33-51.33-51.33v0zM536.576-62.751c19.073 0 34.221 15.426 34.221 34.221s-15.426 34.221-34.221 34.221-34.221-15.426-34.221-34.221 15.426-34.221 34.221-34.221v0zM776.676 777.040h-479.92v-719.742h479.641v719.742h0.279z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>

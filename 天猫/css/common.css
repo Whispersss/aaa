@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font: 12px/1.5 tahoma,arial,"\5b8b\4f53";
+}
+/* banner开始 */
+.banner{
+    background: #ff2f7c;
+}
+.banner img{
+    display: block;
+    margin: 0 auto;
+}
+/* banner结束 */
+/* header开始 */
+#header{
+    /* background:#f2f2f2; */
+    height: 40px;
+    box-shadow: 0 2px 4px 0px rgba(0,0,0,0.30);
+}
+.wrapper{
+    width: 1230px;
+    background: #f2f2f2;
+    margin: 0 auto;
+}
+.header-login{
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    float: left;
+}
+.header-login span,.header-login a{
+    color: #999
+}
+.header-login a{
+    padding-left: 20px;
+}
+.header-login a:hover{
+    color: #FF0036;
+}
+.header-list{
+    float: right;
+}
+.header-list li{
+    float: left;
+    line-height: 40px;
+    padding: 0 15px 0 20px;
+}
+.header-list li a{
+    color: #999;
+}
+.header-list li a:hover{
+    color: #FF0036;
+}
