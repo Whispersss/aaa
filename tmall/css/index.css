@@ -1,0 +1,56 @@
+.logo{
+    padding-top: 5px;
+    float: left;
+}
+.search-box{
+    float: left;
+    margin: 50px 0 0 73px;
+}
+.search{
+    width: 625px;
+    height: 36px;
+    border: 2px solid #ff0036
+}
+.search-text{
+    width: 491px;
+    height: 36px;
+    border: none;
+    outline: none;
+    float: left;
+}
+.search-button{
+    width: 134px;
+    height: 36px;
+    border: none;
+    background: #ff0036;
+    float: left;
+    font-size: 19px;
+    color: white;
+    /* font-family: '\5FAE\8F6F\96C5\9ED1',arial,"\5b8b\4f53"; */
+    font-weight: bold;
+}
+.under-search li{
+    float: left;
+    padding: 0 12px;
+    position: relative;
+}
+.under-search li a{
+    color: #999;
+    font-size: 14px;
+}
+.under-search{
+    margin-top: 5px;
+    margin-left: -12px;
+}
+.under-search .hot a{
+    color: #ff0036;
+}
+.under-search li span{
+    width: 1px;
+    height: 14px;
+    background: #999;
+    position: absolute;
+    right: 0px;
+    top: 4px;
+
+}

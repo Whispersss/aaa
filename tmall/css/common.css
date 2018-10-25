@@ -28,7 +28,7 @@ body{
 }
 .wrapper{
     width: 1230px;
-    background: #f2f2f2;
+    /* background: #f2f2f2; */
     margin: 0 auto;
 }
 .header-login{
@@ -59,4 +59,14 @@ body{
 }
 .header-list li a:hover{
     color: #FF0036;
+}
+.icon-tel{
+    color: deeppink;
+}
+.icon-03f{
+    color: deeppink;
+}
+.icon-wangzhandaohang{
+    color: #ff2f7c;
+    font-size: 18px;
 }
