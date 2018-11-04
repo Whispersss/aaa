@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/iconfont.css">
     <link rel="stylesheet" href="css/iconfont1.css">
     <link rel="stylesheet" href="css/iconfont2.css">
+    <link rel="stylesheet" href="css/iconfont3.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
 
@@ -27,31 +28,48 @@
                <a href="https://register.tmall.com/?spm=875.7931836/B.a2226mz.2.66144265OxirOj" target="-blank">免费注册</a>
             </div>
             <ul class="header-list">
-                <li>
+                <li class="header-list-menu">
                     <a href="#">我的淘宝</a>
+                    <span class="arrow"></span>
+                    <ul class="sub-list">
+                        <li>
+                            <a href="#">已买到的宝贝</a>
+                        </li>
+                            <a href="#">已卖出的宝贝</a>
+
+                    </ul>
                 </li>
             <li>
-                    <i class="iconfont icon-03f"></i>
-                    <a href="#">购物车0件</a>
+                        <a href="#">
+                        <i class="iconfont icon-03f"></i>
+                        购物车0件</a>
                     
                 </li>
-            <li>
+            <li class="header-list-menu">
                     <a href="#">收藏夹</a>
+                    <span class="arrow"></span>
                 </li>
-            <li>
-                    <i class="iconfont icon-tel"></i>
-                    <a href="#">手机版</a>
+            <li class="list-tel">
+                    <a href="#">
+                        <i class="iconfont icon-tel"></i>
+                        手机版</a>
+                        <div class="sub-qr">
+                            <img src="image/tel.png" alt="">
+                        </div>
                     
                 </li>
             <li>
                     <a href="#">淘宝网</a>
                 </li>
-            <li>
+            <li class="header-list-menu">
                     <a href="#">商家支持</a>
+                    <span class="arrow"></span>
                 </li>
-            <li>
-                    <i class="iconfont icon-wangzhandaohang"></i>
-                    <a href="#">网站导航</a>
+            <li class="header-list-menu list-menu-last">
+                    <a href="#">
+                        <i class="iconfont icon-wangzhandaohang"></i>
+                        网站导航</a>
+                        <span class="arrow"></span>
                 </li>
                                     
             </ul>
@@ -63,8 +81,8 @@
         <div class="search-box">
             <div class="search">
                 <form action="">
-                    <input type="text" class="search-text">
-                    <button type="submit" class="search-button">搜 索
+                    <input type="text" class="search-text" placeholder="搜索 天猫 商品/品牌/店铺">
+                    <button type="submit" class="search-button">搜索
                     <s></s>
                     </button>
                 </form>
@@ -127,9 +145,203 @@
                 <li><a href="#">飞猪旅行</a></li>
                 <li><a href="#">苏宁易购</a></li>
             </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="slide-content">
+            <div class="category">
+                <div class="cate-title">商品分类</div>
+                <ul class="main-cate-box">
+                    <li class="main-cate">
+                        <i class="iconfont icon-wangzhandaohang"></i>
+                        <a href="#">女装/内衣</a> 
+                        <div class="cate-sublist">
+                            
+                        </div>
+                    </li>
+                    <li class="main-cate">
+                        <i class="iconfont icon-wangzhandaohang"></i>
+                        <a href="#">男装 /运动户外</a>
+                        <div class="cate-sublist">
+
+                        </div>
+                    </li>
+                    <li class="main-cate">
+                        <i class="iconfont icon-wangzhandaohang"></i>
+                        <a href="#">女鞋 /男鞋 /箱包</a>
+                        <div class="cate-sublist">
+                            <div class="hot-word-con">
+                                    <div class="hot-word-line">
+                                        <div class="line-title">
+                                            <div class="title-text">
+                                                推荐女鞋
+                                                <i class="icon iconfont icon-dayuhao"></i>     
+                                            </div>       
+                                        </div>
+                                        <div class="line-con">
+                                            <a class="hot-word high-light" href="#">潮流过膝靴</a>
+                                            <a class="hot-word high-light" href="#">气质百搭靴</a>
+                                            <a class="hot-word" href="#">永远的帆布鞋</a>
+                                            <a class="hot-word high-light" href="#">流行松糕底</a>
+                                            <a class="hot-word" href="#">英伦牛津鞋</a>
+                                            <div class="sperate"></div>
+                                        </div>
+                                    </div>        
+                                </div>
+                            <div class="sub-logo-con"></div>
+                        </div>
+                    </li>
+                    <li class="main-cate">
+                        <i class="iconfont icon-wangzhandaohang"></i>
+                        <a href="#">美妆 /个人护理</a>
+                        <div class="cate-sublist">
+                            
+                        </div>
+                    </li>
+                    <li class="main-cate">
+                        <i class="iconfont icon-wangzhandaohang"></i>
+                        <a href="#">腕表 /眼镜 /珠宝饰品</a>
+                        <div class="cate-sublist">
+                            
+                        </div>
+                    </li>
+                    <li class="main-cate">
+                        <i class="iconfont icon-wangzhandaohang"></i>
+                        <a href="#">手机 /数码 /电脑办公</a>
+                        <div class="cate-sublist">
+                            
+                        </div>
+                    </li>
+                    <li class="main-cate">
+                        <i class="iconfont icon-wangzhandaohang"></i>
+                        <a href="#">母婴玩具</a>
+                        <div class="cate-sublist">
+                            
+                        </div>
+                    </li>
+                    <li class="main-cate">
+                        <i class="iconfont icon-wangzhandaohang"></i>
+                        <a href="#">零食 /茶酒 /进口食品</a>
+                        <div class="cate-sublist">
+                            
+                        </div>
+                    </li>
+                    <li class="main-cate">
+                        <i class="iconfont icon-wangzhandaohang"></i>
+                        <a href="#">生鲜水果</a>
+                        <div class="cate-sublist">
+                            
+                        </div>
+                    <li class="main-cate">
+                        <i class="iconfont icon-wangzhandaohang"></i>
+                        <a href="#">大家电 /生活电器</a>
+                        <div class="cate-sublist">
+                            
+                        </div>
+                    </li>
+                    <li class="main-cate">
+                        <i class="iconfont icon-wangzhandaohang"></i>
+                        <a href="#">家居建材</a>
+                        <div class="cate-sublist">
+                            
+                        </div>
+                    </li>
+                    <li class="main-cate">
+                        <i class="iconfont icon-wangzhandaohang"></i>
+                        <a href="#">汽车 /配件 /用品</a>
+                        <div class="cate-sublist">
+                            
+                        </div>
+                    </li>
+                    <li class="main-cate">
+                        <i class="iconfont icon-wangzhandaohang"></i>
+                        <a href="#">家纺 /家饰 /鲜花</a>
+                        <div class="cate-sublist">
+                            
+                        </div>
+                    </li>
+                    <li class="main-cate">
+                        <i class="iconfont icon-wangzhandaohang"></i>
+                        <a href="#">医药保健</a>
+                        <div class="cate-sublist">
+                            
+                        </div>
+                    </li>
+                    <li class="main-cate">
+                        <i class="iconfont icon-wangzhandaohang"></i>
+                        <a href="#">厨具 /收纳 /宠物</a>
+                        <div class="cate-sublist">
+                            
+                        </div>
+                    </li>
+                        <li class="main-cate">
+                        <i class="iconfont icon-wangzhandaohang"></i>
+                        <a href="#">图书音像</a>
+                        <div class="cate-sublist">
+                                <div class="hot-word-con">
+                                    <div class="hot-word-line">
+                                        <div class="line-title">
+                                            <div class="title-text">
+                                                推荐女鞋
+                                                <i class="icon iconfont icon-dayuhao"></i>     
+                                            </div>       
+                                        </div>
+                                        <div class="line-con">
+                                            <a class="hot-word high-light" href="#">潮流过膝靴</a>
+                                            <a class="hot-word high-light" href="#">气质百搭靴</a>
+                                            <a class="hot-word" href="#">永远的帆布鞋</a>
+                                            <a class="hot-word high-light" href="#">流行松糕底</a>
+                                            <a class="hot-word" href="#">英伦牛津鞋</a>
+                                            <div class="sperate"></div>
+                                        </div>
+                                    </div>        
+                                </div>
+                                <div class="sub-logo-con"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 轮播图 -->
+            <div class="slide-box">
+                <div class="slide-img-box">
+                    <a href="#">
+                        <img src="image/img01.jpg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="image/img02.jpg" alt="">
+                    </a>
+                </div>
+                <div class="slide-btn-box">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                </div>
+            </div>  
 
         </div>
-
+        <!-- 品牌闪购 -->
+        <div class="wrapper brand-sale">
+            <div class="brand-list">
+                <div class="brand-list-title">
+                    <span class="brand-title-cn">品牌闪购</span>
+                    <span class="brand-title-en">BRAND SALE</span>
+                    <a class="brand-more" href="#">
+                        <img src="image/more.png" alt="">
+                    </a>
+                </div>
+                <div class="brand-list-img">
+                    <a href="#">
+                        <img src="image/brand-img01.webp" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

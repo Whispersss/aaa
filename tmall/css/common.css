@@ -22,7 +22,7 @@ body{
 /* banner结束 */
 /* header开始 */
 #header{
-    /* background:#f2f2f2; */
+    background:#f2f2f2;
     height: 40px;
     box-shadow: 0 2px 4px 0px rgba(0,0,0,0.30);
 }
@@ -52,10 +52,12 @@ body{
 .header-list li{
     float: left;
     line-height: 40px;
-    padding: 0 15px 0 20px;
+    position: relative;
 }
-.header-list li a{
+.header-list>li>a{
+    padding: 0 15px 0 15px;
     color: #999;
+    display: block;
 }
 .header-list li a:hover{
     color: #FF0036;
@@ -69,4 +71,70 @@ body{
 .icon-wangzhandaohang{
     color: #ff2f7c;
     font-size: 18px;
+}
+.header-list li.header-list-menu>a:hover{
+    background:white;
+    text-decoration: underline;
+}
+.arrow{
+    width: 0px;
+    height: 0px;
+    border: 3px solid transparent;
+    border-top-color: #999;
+    position: absolute;
+    right: 6px;
+    top: 20px;
+    transition: transform 0.1s ease;
+}
+.header-list .header-list-menu:hover .arrow{
+    transform: rotate(180deg);
+    transform-origin:50% 25%;
+}
+.header-list li.list-menu-last:hover > a{
+    color: #999;
+    text-decoration: none;
+}
+.sub-list{
+    position: absolute;
+    left: 0;
+    top: 34px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-top: none;
+    padding: 10px 8px 10px 13px;
+    width: 74px;
+    line-height: 30px;
+    display: none;
+}
+.sub-list a{
+    color: #999;
+}
+.sub-list a:hover{
+    color: #FF0036;
+    text-decoration: underline;
+}
+.header-list .header-list-menu:hover .sub-list{
+    display: block;
+}
+.sub-qr{
+    position: absolute;
+    left: -39px;
+    top:29px;
+    box-shadow:0 0 2px 2px rgba(0,0,0,0.15);
+    display: none;
+
+}
+.sub-qr::after{
+    content:'';
+    width:0;
+    height: 0;
+    border:4px solid transparent;
+    border-bottom-color:#fff;
+    position: absolute;
+    left:50%;
+    top:-8px;
+    margin-left:-4px;
+}
+.list-tel:hover .sub-qr{
+    display: block;
 }
