@@ -93,8 +93,9 @@
     padding-left: 200px;   
 }
 .content{
-    height: 1000px;
-    background: url(../image/bg.jpg) center -207px no-repeat ;
+    height: 4000px;
+    background: url(../image/bg.png) center -207px no-repeat ;
+    background-color: #f5f5f5;
     
 }
 .slide-content{
@@ -226,9 +227,13 @@
 .icon-dayuhao{
     color: #333;
     font-size: 14px;
+    position: absolute;
+    top: 0px;
+    right: -15px;
+
 }
 .line-title{
-    width: 77px;
+    width: 60px;
     color: #333;
     margin-right: 30px;
     position: relative;
@@ -237,6 +242,9 @@
     line-height: 22px;
     height: 22px;
     float: left;
+}
+.title-text{
+    position: relative;
 }
 .hot-word{
     height: 22px;
@@ -247,6 +255,11 @@
     margin-left: 13px;
     font-weight: normal;
 }
+.line-con{
+    float: left;
+    width: 493px;
+}
+
 .line-con .high-light{
     color: #e54077;
 }
@@ -294,15 +307,41 @@
     height: 5px;
     background: #666;
 }
+.sub-logo {
+    float: left;
+    width: 73px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    height: 37px;
+    padding: 5px 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.sub-logo img {
+    width: 73px;
+    height: 36.5px;
+    margin: 0 auto;
+}
+.sub-logo-bottom {
+    float: left;
+    width: 189px;
+    height: 97px;
+    padding-top: 10px;
+}
+.sub-logo-bottom img {
+    width: 189px;
+    height: 87px;
+    margin: 0 auto;
+}
 /* 品牌闪购 */
 .brand-sale{
-    height: 500px;
-    background: powderblue;
+    height: 370px;
     margin-top: 30px;
 }
 .brand-list{
     width: 234px;
     background: #ffffff;
+    float: left;
 }
 .brand-list-img img{
     width: 234px;
@@ -335,4 +374,115 @@
 .brand-more img{
     width: 18px;
     height: 18px;
+}
+.brand-list-2{
+    width: 485px;
+    margin-left: 12px;
+}
+.brand-list-2 .brand-list-img img{
+    width: 485px;
+}
+.brand-list-img img:hover{
+    opacity: 0.7;
+}
+.more{
+    line-height: normal;
+    vertical-align: 3px;
+    font-size: 16px;
+}
+/* brand logo */
+.brand-logo{
+    margin-top: 15px;
+    overflow: hidden;
+}
+.brand-logo li{
+    width: 122px;
+    height: 108px;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    float: left;
+}
+.brand-logo li img{
+    width: 82%;
+    height: 50px;
+    display: block;
+    margin: 30px auto;
+}
+.brand-logo-mask{
+    position: absolute;
+    left:0px;
+    top:0px;
+    bottom:0px;
+    right:0px;
+    background:rgba(0,0,0,0.8);
+    /* width:100%;
+    height: 100%; */
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease ;
+}
+.coupon{
+    color: #fff;
+    text-align: center;
+    margin-top:38px;
+}
+.enter{
+    display: inline-block;
+    width: 63px;
+    height: 18px;
+    line-height: 18px;
+    background: #ff0036;
+    color: #fff;
+    text-align: center;
+    border-radius:9px;
+    margin-top:5px;
+}
+.brand-logo li:hover .brand-logo-mask{
+    opacity: 1;
+}
+.new-floor-con {
+    margin: 20px auto 0;
+    width: 1230px;
+    padding-right: 30px;
+}
+.new-floor-con .floor-line-con {
+    margin-top: 20px;
+    width: 100%;
+    height: 665px;
+    position: relative;
+    
+}
+.new-floor-con .floor-line-con .floor-name img {
+    vertical-align: middle;
+    width: 214px;
+    height: 25px;
+    margin-left: 15px;
+}
+.new-floor-con .floor-line-con .floor-name {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    color: #000;
+    height: 28px;
+}
+.new-floor-con .floor-line-con .hot-word-con2 {
+ float: right;
+ margin-right: -18px;
+}
+.new-floor-con .floor-line-con .hot-word-con2 a:hover {
+    /* text-decoration: underline; */
+    border-bottom: 1px solid #000;
+}
+.new-floor-con .floor-line-con .hot-word2 {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    margin: 5px 10px;
+    font-size: 14px;
+    border: none;
+
+    color: #000;
 }
