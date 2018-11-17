@@ -38,7 +38,7 @@ body{
     float: left;
 }
 .header-login span,.header-login a{
-    color: #999
+    color: #999;
 }
 .header-login a{
     padding-left: 20px;
