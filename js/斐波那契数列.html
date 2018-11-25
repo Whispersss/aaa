@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 函数的递归调用
+        function fib(n){
+            if(n<=2){
+                return 1;
+            }
+            return fib(n-1) + fib(n-2); 
+        }
+        console.log(fib(10));
+
+        function fib1(n){
+            if(n<=2){
+                return 1;
+            }
+            var f1 = 1, f2 = 2, temp;
+            for( i=3; i<=n; i++){
+                temp = f1 + f2;
+                f1 = f2;
+                f2 = temp;
+            }
+            return f2;
+        }
+        console.log( fib1(10));
+    </script>
+</body>
+</html>
