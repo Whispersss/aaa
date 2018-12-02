@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #container{
+            width: 1130px;
+            height: 500px;
+            margin: 120px auto;
+            position: relative;
+        }
+        #img-box img{
+            display: none;
+        }
+        #img-box .imgimg{
+            display: block;
+        }
+        #tab{
+            position: absolute;
+            right: 493px;
+            bottom: 10px;
+        }
+        #tab li{
+            width: 30px;
+            height: 30px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            float: left;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        #tab li.imgimg{
+            background: skyblue;
+        }
+        #next, #last{
+            position: absolute;
+            bottom: 10px;
+            width: 25px;
+            height: 25px;
+            line-height: 24px;
+            text-align: center;
+            background: #000000;
+            color: #fff;
+            cursor: pointer;
+        }
+        #last{
+            left: 10px;
+        }
+        #next{
+            left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="img-box">
+            <img class="imgimg" src="E:\zzz\aaa\tmall\image\img01.jpg" alt="">
+            <img src="E:\zzz\aaa\tmall\image\img02.jpg" alt="">
+            <img src="E:\zzz\aaa\tmall\image\img01.jpg" alt="">
+            <img src="E:\zzz\aaa\tmall\image\img02.jpg" alt="">
+        </div>
+        <ul id="tab">
+            <li class="imgimg">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>   
+        <span id="last">&lt;</span>
+        <span id="next">&gt;</span>
+    </div>
+    <script>
+        var oTab = document.getElementById("tab");
+        var aLi = oTab.getElementsByTagName('li');
+        var oImgBox = document.getElementById('img-box');
+        var aImg = oImgBox.getElementsByTagName('img');
+        var oNext = document.getElementById('next');
+        var iNow = 0;
+        for( var i=0; i<aLi.length;i++){
+            aLi[i].index=i;
+            aLi[i].onmouseover = function(){
+                for(var j=0;j<aLi.length;j++){
+                    aLi[j].className ='';
+                    aImg[j].className = '';
+                }
+                this.className = 'imgimg';
+                aImg[this.index].className = 'imgimg';
+            }
+        }
+        oNext.onclick = function(){
+            iNow++;
+            console.log(iNow);
+            if(iNow >= aImg.length){
+                iNow = 0;
+            }
+            for(var j=0;j<aLi.length;j++){
+                aLi[j].className = '';
+                    aImg[j].className = '';
+                }
+            aLi[iNow].className = 'imgimg';
+            aImg[iNow].className = 'imgimg';
+        }
+    </script>
+</body>
+</html>
