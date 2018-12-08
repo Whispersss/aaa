@@ -96,6 +96,7 @@
     height: 4000px;
     background: url(../image/bg.png) center -207px no-repeat ;
     background-color: #f5f5f5;
+    position: relative;
     
 }
 .slide-content{
@@ -272,10 +273,15 @@
     height: 10.5px;
     clear: both;
 }
-.slide-img-box img{
+#slide-img-box img{
+    display: none;
+}
+    
+#slide-img-box .slide-li{
     width: 1230px;
     display: block;
     height: 500px;
+
 }
 .slide-box{
     position: relative;
@@ -447,6 +453,7 @@
     margin: 20px auto 0;
     width: 1230px;
     padding-right: 30px;
+    
 }
 .new-floor-con .floor-line-con {
     margin-top: 20px;
@@ -485,4 +492,236 @@
     border: none;
 
     color: #000;
+}
+.floor-body {
+    height: 618px;
+    margin-top: 10px;
+    clear: both;
+}
+.body-bigbanner {
+    float: left;
+    width: 235px;
+    height: 618px;
+    position: relative;
+}
+.body-bigbanner img {
+    width: 235px;
+    height: 618px;
+}
+.banner-detail {
+    width: 218px;
+    height: 64px;
+    float: left;
+    position: absolute;
+    top: 430px;
+    left: 0px;
+}
+.left-title-wrap {
+    width: 70px;
+    height: 64px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;/*此元素会作为一个表格单元格显示（类似 <td> 和 <th>）*/
+    background: rgba(0,0,0,.9);
+    
+}
+.left-title-wrap span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 24px;
+    width: 36px;
+    overflow: hidden;
+    color: #FFF;
+    font-size: 18px;
+    font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
+}
+.right-title-wrap {
+    width: 128px;
+    height: 64px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;/*此元素会作为一个表格单元格显示（类似 <td> 和 <th>）*/
+    background: rgba(0,0,0,.6);
+}
+.right-title-wrap span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 24px;
+    width: 114px;
+    overflow: hidden;
+    color: #FFF;
+    font-size: 18px;
+    font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
+}
+.detail-wrap {
+    width: 235px;
+    height: 60px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-image: linear-gradient(-180deg,rgba(0,0,0,0) 4%,rgba(0,0,0,.36) 100%);
+}
+.detail-wrap img {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+}
+.body-bigbanner:hover img {
+    opacity: .7;
+}
+.floor-tab-item{
+    width: 462px;
+    height: 282px;
+    margin: 10px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .09);
+}
+#floor-tab-head ul{
+    overflow: hidden;
+}
+#floor-tab-head li{
+    float: left;
+    width: 191px;
+    height: 57px;
+    padding: 0 20px;
+    background: #f1f1f1;
+    text-align: center;
+    line-height: 57px;
+    color: #000;
+    font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+#floor-tab-head li.selected{
+    margin: 0;
+    background-color: #00b262;
+    color: #FFF;
+}
+#floor-tab-body>ul{
+    width: 462px;
+    height: 225px;
+    background: #ffffff;
+    display: none;
+}
+#floor-tab-body ul.active{
+    display: block;
+}
+#floor-tab-body a{
+    height: 225px;
+    width: 462px;
+    display: block;
+}
+#floor-tab-body a:hover img{
+    opacity: .7;
+}
+#right-detail{
+    position: absolute;
+    top: 86px;
+    width: 291px;
+    height: 87px;
+    background: url(../image/point1.png) 0 center no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 99;
+}
+.floor-tab-detail{
+    position: relative;
+}
+.floor-tab-detail>img{
+    float: right;
+    margin-top: 10px;
+    margin-right: 30px;
+    width: 200px;
+    height: 200px;
+}
+#right-detail>.title-wrap{
+    margin-left: 26px;
+    margin-top: 8px;
+    vertical-align: middle;
+}
+.title-wrap{
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #00b262;
+    font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
+}
+.title-wrap span{
+    margin-left: 8px;
+}
+.content-wrap span{
+    margin-left: 26px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
+    color: #000;
+}
+.floor-tabs {
+    width: 484px;
+    height: 301px;
+    margin: 0 0 15px 13px;
+    background: #ffffff;
+    float: left;
+}
+.floor-item {
+    display: block;
+    width: 235px;
+    height: 301px;
+    margin: 0 0 15px 13px;
+    float: left;
+    position: relative;
+}
+.grid {
+    width: 234px;
+    height: 300px;
+    border: 1px solid #fff;
+    background: #ffffff;
+}
+.grid-img {
+    width: 185px;
+    height: 185px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.grid-img img {
+    width: 185px;
+    height: 185px;
+}
+.grid-detail {
+    width: 135px;
+    height: 40px;
+    line-height: 20px;
+    margin: 8px auto;
+    font-size: 14px;
+    color: #333;
+    font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
+    overflow: hidden;
+    text-align: center;
+}
+.grid-price {
+    width: 234px;
+    height: 18px;
+    text-align: center;
+    font-size: 18px;
+    color: #FF0036;
+    font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
+}
+.floor-item:hover {
+    cursor: pointer;
+}
+.floor-item:hover img{
+    opacity: .7;
+}
+.grid:hover {
+    border: 1px solid #ff0036;
+}
+.content-end{
+    background: url(../image/end.png) no-repeat;
+    width: 80px;
+    height: 45px;
+    position: absolute;
+    bottom: 0px;
+    left: 930px;
 }
