@@ -20,9 +20,6 @@
                 position: relative;
                 overflow: hidden;
             }
-            #img-box img{
-                /* display: none; */
-            }
             #img-box .imgimg{
                 display: block;
             }
@@ -65,6 +62,7 @@
             #img-box{
                 width: 4520px;
                 position: absolute;
+                transition: transform .3s ease-out;
             }
             #img-box img{
                 float: left;
@@ -90,22 +88,50 @@
         </div>
         <script src=""></script>
         <script>
+        var oContainer = document.getElementById('container');     
         var oTab = document.getElementById("tab");
         var aLi = oTab.getElementsByTagName('li');
         var oImgBox = document.getElementById('img-box');
         var aImg = oImgBox.getElementsByTagName('img');
         var oNext = document.getElementById('next');
-            for( var i = 0;i<aLi.length;i++){
-                aLi[i].index=i; 
-                aLi[i].onmouseover = function(){
-                    for(var j=0;j<aLi.length;j++){
-                    aLi[j].className='';
-                    }
-                    this.className='imgimg';
-                    oImgBox.style.left = -this.index * 1130+ "px"; 
-                }
-            }
+        var iNow = 0;
+        var timer;
         
-        </script>
+        function change(idx){
+            for(var i=0; i<aLi.length; i++){
+                aLi[i].className = "";
+            }
+            aLi[idx].className = "imgimg";
+            var m = -1130 * idx + "px";
+            var n = "translateX(" + m + ")";
+            oImgBox.style.transform = n;
+        }        
+        function run(){
+            timer = setInterval(function(){
+                oNext.onclick();
+            },1000);
+        }
+        for(var i=0; i<aLi.length; i++){
+            aLi[i].index = i; 
+            aLi[i].onmouseover = function(){
+                change(this.index);
+                iNow = this.index; 
+            }
+        }
+        oNext.onclick = function(){
+            iNow++;
+            if(iNow >= aLi.length){
+                iNow = 0;
+            }
+            change(iNow);
+        }
+        run();
+        oContainer.onmouseover = function(){
+            clearInterval(timer);
+        }
+        oContainer.onmouseout = function(){
+            run();
+        }        
+    </script>
 </body>
 </html>

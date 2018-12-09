@@ -86,31 +86,66 @@
         var oImgBox = document.getElementById('img-box');
         var aImg = oImgBox.getElementsByTagName('img');
         var oNext = document.getElementById('next');
+        var oLast = document.getElementById('last');
         var iNow = 0;
         for( var i=0; i<aLi.length;i++){
             aLi[i].index=i;
             aLi[i].onmouseover = function(){
-                for(var j=0;j<aLi.length;j++){
-                    aLi[j].className ='';
-                    aImg[j].className = '';
-                }
-                this.className = 'imgimg';
-                aImg[this.index].className = 'imgimg';
+               change(this.index);
+               iNow = this.index;
             }
         }
         oNext.onclick = function(){
+            // getIndex();
             iNow++;
-            console.log(iNow);
+            
             if(iNow >= aImg.length){
                 iNow = 0;
             }
+           change(iNow);
+           
+        }
+        oLast.onclick = function(){
+            // getIndex();
+            iNow--;
+            console.log(iNow);
+            if(iNow < 0){
+                iNow = 3;
+            }
+           change(iNow);
+           
+
+        }
+        function change(idx){
             for(var j=0;j<aLi.length;j++){
-                aLi[j].className = '';
+                    aLi[j].className ='';
                     aImg[j].className = '';
                 }
-            aLi[iNow].className = 'imgimg';
-            aImg[iNow].className = 'imgimg';
+                aLi[idx].className = 'imgimg';
+                aImg[idx].className = 'imgimg';
         }
+        run();
+        // 划入的时候清掉定时器
+        oTab.onmouseover = function(){
+            clearInterval(timer);
+        }
+        // 划出开启新的定时器
+        oTab.onmouseout= function(){
+            run();
+        }
+        function run(){
+            timer = setInterval(function(){
+                oNext.onclick();
+            },1000);
+        }
+
+        // function getIndex(){
+        //     for(var k=0;k<aLi.length;k++){
+        //         if(aLi[k].className == 'imgimg'){
+        //             iNow=aLi[k].index;
+        //         }
+        //     }
+        // }
     </script>
 </body>
 </html>

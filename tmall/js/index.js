@@ -15,20 +15,50 @@ for(var i=0;i<aLi.length;i++){
     }
 
 }
-
+var oSlideBox = document.getElementsByClassName('slide-box')[0];
 var oSlideTab = document.getElementById('slide-tab');
 var aKi = oSlideTab.getElementsByTagName('li');
 var oSlideImgBox = document.getElementById('slide-img-box');
 var aImg = oSlideImgBox.getElementsByTagName('img');
+var oNext = document.getElementById('next');
+var iNow = 0;
 
 for( var i=0; i<aKi.length;i++){
     aKi[i].index=i;
     aKi[i].onmouseover = function(){
-        for(var j=0;j<aKi.length;j++){
+        change(this.index);
+        iNow = this.index;
+    }
+}
+oNext.onclick = function(){
+    
+    iNow++;
+    
+    if(iNow >= aImg.length){
+        iNow = 0;
+    }
+   change(iNow);
+   
+}
+function change(idx){
+    for(var j=0;j<aKi.length;j++){
             aKi[j].className ='';
             aImg[j].className = '';
         }
-        this.className = 'slide-li';
-        aImg[this.index].className = 'slide-li';
-    }
+        aKi[idx].className = 'slide-li';
+        aImg[idx].className = 'slide-li';
+}
+run();
+// 划入的时候清掉定时器
+oSlideBox.onmouseover = function(){
+    clearInterval(timer);
+}
+// 划出开启新的定时器
+oSlideBox.onmouseout= function(){
+    run();
+}
+function run(){
+    timer = setInterval(function(){
+        oNext.onclick();
+    },3000);
 }

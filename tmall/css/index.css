@@ -274,14 +274,15 @@
     clear: both;
 }
 #slide-img-box img{
-    display: none;
+    transition: opacity 0.8s ease-out;
+    opacity: 0;
 }
     
 #slide-img-box .slide-li{
     width: 1230px;
     display: block;
     height: 500px;
-
+    opacity: 1;
 }
 .slide-box{
     position: relative;
@@ -302,11 +303,14 @@
     margin-left: 5px;
     cursor: pointer;     */
 }
+#slide-tab li.slide-li{
+    background: white;
+}
 .slide-btn-box li{
     float: left;
     margin-left: 5px;
     width: 25px;
-    opacity: 0.3;
+    opacity: 0.5;
     cursor: pointer; 
     display: block;
     overflow: hidden;
