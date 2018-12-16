@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #a{
+            height: 300px;
+            width: 300px;
+            background: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="a"></div>
+    <script>
+        var aDiv = document.getElementById('a');
+        aDiv.onmousedown = function(){
+            aDiv.onmousemove = function(e){
+                aDiv.style.left = e.clientX - aDiv.offsetWidth/2 + 'px';
+                aDiv.style.top = e.clientY - aDiv.offsetWidth/2 + 'px';
+                if(aDiv.offsetLeft <= 0){
+                    aDiv.style.left = 0;
+                }
+                if(aDiv.offsetTop <= 0){
+                    aDiv.style.top = 0;
+                }
+                if(aDiv.offsetLeft >= window.innerWidth - aDiv.offsetWidth){
+                    aDiv.style.left = window.innerWidth - aDiv.offsetWidth + 'px';
+                }
+                if(aDiv.offsetTop >= window.innerHeight - aDiv.offsetHeight){
+                    aDiv.style.top = window.innerHeight - aDiv.offsetHeight + 'px';
+                }
+            }
+            
+            }
+
+            aDiv.onmouseup = function(){
+                aDiv.onmousemove = 'none';
+            }
+        
+    </script>
+</body>
+</html>

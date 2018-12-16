@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #small-box{
+            position: relative;
+            float: left;
+        }
+        span{
+            position: absolute;
+            left:0;
+            top:0;
+            width: 150px;
+            height: 150px;
+            background: rgba(255,255,255,0.5);
+            display: none;
+        }
+        #big-box{
+            float: left;
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            display: none;
+            position: relative;
+        }
+        #big-img{
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="small-box">
+        <img src="E:\zzz\aaa\tmall\image\1.jpg" alt="">
+        <span></span>
+    </div>
+    <div id="big-box">
+        <img id="big-img" src="E:\zzz\aaa\tmall\image\2.jpg" alt="">
+    </div>    
+    <script>
+        var oSmallBox = document.getElementById('small-box');
+        var oBigBox = document.getElementById("big-box");
+        var oSpan = document.getElementsByTagName('span')[0];
+        var oBigImg = document.getElementById('big-img');
+        
+        oSmallBox.onmouseover = function(){
+            oSpan.style.display = 'block';
+            oBigBox.style.display = 'block';
+        }
+
+        oSmallBox.onmousemove = function(e){
+            oSpan.style.left = e.clientX - oSpan.offsetWidth/2 + 'px';
+            oSpan.style.top = e.clientY - oSpan.offsetHeight/2 + 'px';
+            if(oSpan.offsetLeft<=0){
+                oSpan.style.left=0;
+            }
+            if(oSpan.offsetLeft>=oSmallBox.offsetWidth-oSpan.offsetWidth){
+                oSpan.style.left = oSmallBox.offsetWidth-oSpan.offsetWidth + 'px';
+            }
+            if(oSpan.offsetTop<=0){
+                oSpan.style.top=0;
+            }
+            if(oSpan.offsetTop>=oSmallBox.offsetHeight-oSpan.offsetHeight){
+                oSpan.style.top = oSmallBox.offsetHeight-oSpan.offsetHeight + 'px';
+            }
+            var smallMax  =  oSmallBox.offsetWidth - oSpan.offsetWidth;
+            var smallMaxY = oSmallBox.offsetHeight - oSpan.offsetHeight;
+            var bigMax  =  oBigImg.offsetWidth - oBigBox.offsetWidth;
+            var bigMaxY = oBigImg.offsetHeight - oBigBox.offsetHeight;
+            var percent = oSpan.offsetLeft/smallMax;
+            oBigImg.style.left = -bigMaxY*percent +"px";
+            oBigImg.style.top = -bigMaxY*percent +'px';
+
+
+
+
+        }
+        oSmallBox.onmouseout = function(){
+            oSpan.style.display = "none";
+            oBigBox.style.display = "none";
+        }
+    
+    
+    
+    </script>
+</body>
+</html>
