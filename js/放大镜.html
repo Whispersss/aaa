@@ -77,8 +77,9 @@
             var bigMax  =  oBigImg.offsetWidth - oBigBox.offsetWidth;
             var bigMaxY = oBigImg.offsetHeight - oBigBox.offsetHeight;
             var percent = oSpan.offsetLeft/smallMax;
-            oBigImg.style.left = -bigMaxY*percent +"px";
-            oBigImg.style.top = -bigMaxY*percent +'px';
+            var percentY = oSpan.offsetTop/smallMaxY;
+            oBigImg.style.left = -bigMax*percent +"px";
+            oBigImg.style.top = -bigMaxY*percentY +'px';
 
 
 
