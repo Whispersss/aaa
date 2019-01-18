@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: .34rem;
+}
+li{
+    list-style: none;
+}
+.header{
+    height: 1.01rem;
+    background: #06c1ae;
+    border-bottom: 1px solid #21897d;
+    display: flex;    
+}
+.react{
+    
+    text-decoration: none;
+}
+.city{    
+    height: 1.01rem;
+    width: 1.67rem;
+    line-height: 1.01rem;
+    color: aliceblue;
+    
+    font-size: .32rem;
+}
+.wrap-a{
+    width:1.67rem;
+    text-decoration: none;
+    text-align: center;
+}
+.wrap-b{
+    width: 0.94rem;
+    text-decoration: none;
+    text-align: center;
+}
+.mine{
+    
+    font-size: 0.32rem;
+    line-height: 1.01rem;
+    height: 1.01rem;
+    color: aliceblue;
+    
+    font-size: .32rem;
+}
+.search-box{
+    border-radius: .06rem;
+    background: rgba(0,0,0,.15);
+    height: .64rem;
+    line-height: .64rem;
+    flex: 1;
+    margin-top: .2rem;
+}
+.search{
+    font-size: .26rem;
+    color: #68dbce;
+    padding-left: .6rem;   
+}
+#img{
+    width: 100%;
+}
+.list{
+    height: 3.6rem;
+    border-top:1px solid #DDD8CE;
+}
+.list .circle{
+    width:0.8rem;
+    height:.8rem;
+    background: #06c1ae;
+    display: block;
+    margin:0 auto;
+    border-radius: 50%;
+}
+.list .txt{
+    font-size: 0.24rem;
+    color: #666;
+}
+.list li{
+    float: left;
+    padding: 0.2rem 0;
+    width: 20%;
+    text-align: center;
+}
+.guess{
+    padding: 0.2rem 0;
+    display: block;
+    border-bottom: 1px solid #DDD8CE;
+    color: #333;
+}
+.like{
+    border-top: 0.2rem solid #f0efed;
+    border-bottom: 1px solid #DDD8CE;
+    padding-left: 0.2rem;
+}
+.like-list li{
+    display: flex;
+}
+.like-list li img{
+    width:1.8rem;
+    height:1.8rem;
+}
+.like-list .like-intro{
+    flex: 1;
+    margin-left:0.2rem;
+    margin-bottom: .12rem;
+    font-size: .3rem;
+}
+.price{
+    color: #06c1ae;
+    font-size: .34rem;
+}
+

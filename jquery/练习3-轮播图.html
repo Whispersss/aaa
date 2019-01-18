@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-1.12.4.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .carousel-map{
+            width: 1180px;
+            height: 500px;
+            position: relative;
+        }
+        ul{
+            position: absolute;
+            top: 505px;
+            left: 0px;
+        }
+        li{
+            list-style: none;
+            float: left;
+            background-color: yellow;
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .img-box{
+            position: relative;
+        }
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity .3s ease-out;
+            opacity: 0;
+        }
+        .active{
+            opacity: 1;
+        }
+        .selected{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 轮播图 -->
+    <div class="carousel-map">
+        <div class="img-box">
+            <img class="active" src="./carousel1.jpg" alt="">
+            <img src="./carousel2.jpg" alt="">
+            <img src="./carousel3.jpg" alt="">
+            <img src="./carousel4.jpg" alt="">
+            <img src="./carousel5.jpg" alt="">
+            <img src="./carousel6.jpg" alt="">
+            <img src="./carousel7.jpg" alt="">
+            <img src="./carousel8.jpg" alt="">
+        </div>
+        <ul class="select-box">
+            <li class="selected">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </div>
+    <script>
+        var timer;
+        var iNow = 0;
+        $('li').on('mouseover', function(){
+            iNow = $(this).index();
+            $(this).addClass('selected').siblings().removeClass('selected');
+            $('img').eq($(this).index()).addClass('active').siblings().removeClass('active');
+            clearInterval(timer);
+        })
+        $('li').on('mouseout', function(){
+            run();
+        })
+        function change(index){
+            $('img').removeClass('active');
+            $('li').removeClass('selected');
+            $('img').eq(index).addClass('active');
+            $('li').eq(index).addClass('selected');
+        }
+        function run(){
+            timer = setInterval(function(){
+                iNow++;
+                if(iNow>=$('li').length){
+                    iNow = 0;
+                }
+                change(iNow);
+            },1000)
+        }
+        run();
+    </script>
+</body>
+</html>
