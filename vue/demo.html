@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .active{
+            color: aqua;
+        }
+        ul,li{ padding:50;margin:50;list-style:none}
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="msg" @keyup='filter()'>
+        <button @click="add()">add</button>
+        <ul>
+            <li v-for='(obj,idx) in showlist' :class="{active:obj.isA}"@click='change(obj)'>
+                {{obj.val}}
+            <button @click='del(idx)'>del</button>
+            </li>
+        </ul>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                list:[{
+                    val:'aaa',
+                    isA:false
+                },
+                {
+                    val:'bbb',
+                    isA:false
+                }],
+                showlist:[{
+                    val:'aaa',
+                    isA:false
+                }],
+                msg:'',
+            },
+            methods: {
+                add(){
+                    this.list.push({val:this.msg,isA:false});
+                    this.msg='';
+                    this.showlist = [...this.list];
+                },
+                del(idx){
+                    this.list.splice(idx,1);
+                },
+                change(obj){
+                    obj.isA=!obj.isA;
+                },
+                filter(){
+                    var arr = this.list.filter((obj)=>{
+                        return obj.val.includes(this.msg);
+                    })
+                    this.showlist = arr;
+                }
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>
