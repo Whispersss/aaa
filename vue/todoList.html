@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            width: 400px;
+            margin: 50px auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            height: 50px;
+            line-height: 50px;
+            background: #cccccc;
+            padding: 0 10px;
+            margin-bottom: 10px;
+        }
+
+        .price,
+        .close {
+            float: right;
+        }
+
+        .close {
+            margin-left: 10px;
+            color: red;
+        }
+
+        .selected {
+            background: pink;
+        }
+    </style>    
+</head>
+<body>
+    <div id="app">
+        <h1>todoList</h1>
+        <hr>
+        <div>
+            <label for="proName">名称</label>
+            <input type="text">
+            <label for="proPrice">价格</label>
+            <input type="text">
+            <button>添加</button>
+        </div>
+        <div>
+            <input type="text">
+            <button>搜索</button>
+        </div>
+        <ul>
+            <li>
+                <input type="text">
+                <span>{{product.name}}</span>
+                <span class='close'>[X]</span>
+                <span class='price'>{{product.price}}</span>
+            </li>
+        </ul>
+        <div>
+            <button class='del' @click='del()'>删除选中</button>
+            总价
+            <span class='tatal_price'>{{sum()}}</span>
+        </div>
+    </div>
+</body>
+</html>
