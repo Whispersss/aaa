@@ -1,5 +1,12 @@
 #div2{
-    width: 100px;
-    height: 33px;
-    background: blue;
+    width: 500px;
+    height: 500px;
+    background:url(./img/22.gif);
 }
+#div1{
+    width: 200px;
+    height: 200px;
+    transform: rotate(45deg);
+}
+
+    

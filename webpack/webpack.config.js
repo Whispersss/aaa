@@ -14,23 +14,49 @@ module.exports = {
     },
     module:{
         rules:[
-            {
-                test:/\.css$/,
-                // use:['style-loader',"css-loader"]
-                use:ExtractTextPlugin.extract({
-                    fallback:'style-loader',
-                    use:'css-loader'
-                })
-            },
+            // {
+            //     test:/\.css$/,
+            //     // use:['style-loader',"css-loader"]
+            //     use:ExtractTextPlugin.extract({
+            //         fallback:'style-loader',
+            //         use:'css-loader'
+            //     })
+            // },
             {
                 test:/\.(jpg|png|gif)$/,
                 use:[{
                     loader:'url-loader',
                 options:{
-                    limit:2097152,
+                    limit:209715200,
                     outputPath:'img/'
                 }
                 }]
+                
+            },{
+                test:/\.(htm|html)$/i,
+                loader:'html-withimg-loader'
+            },
+            {
+                test:/\.scss$/,
+                use:['style-loader','css-loader','sass-loader']
+            },
+            // {
+            //     test:/\.scss$/,
+            //     use:ExtractTextPlugin.extract({
+            //         use:['css-loader','sass-loader'],
+            //         fallback:'style-loader',
+            //     })
+            // }
+            {
+                test:/\.css$/,
+                // use:['style-loader',"css-loader"]
+                use:ExtractTextPlugin.extract({
+                    fallback:'style-loader',
+                    use:[{
+                        loader:'css-loader',
+                        options:{importLoaders:1}
+                    },'postcss-loader']
+                })
             }
         ]
     },
@@ -42,7 +68,8 @@ module.exports = {
                 removeAttributeQuotes: true
             },
             hash: true,
-            template: './src/test.html'
+            template: './src/test.html',
+            filename:'test.html'
         }),
     ],
     devServer: {
