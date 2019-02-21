@@ -13,13 +13,31 @@
     <script src="react-dom.development.js"></script>
     <script src="browser.min.js"></script>
     <script type="text/babel">
-        class Count extends React.components{
+        class Count extends React.Component{
+            constructor(pros){
+                super(pros),
+                this.state = {
+                    num:1
+                }
+                // this.addHandle = this.addHandle.bind(this)
+            }
+            addHandle(){
+                this.setState({
+                    num:++this.state.num
+                });
+            }
             render(){
-                return <h1>111</h1>
+                return (
+                    <div>
+                        <h1>{this.state.num}</h1>
+                        <button onClick={ this.addHandle.bind(this) }>add</button>
+                    </div>
+                )
             }
         }
-         ReactDOM.render(<Count></Count>,
-         document.getElementById('root')
+         ReactDOM.render(
+            <Count></Count>,
+            document.getElementById('root')
          )
     </script>
 </body>
