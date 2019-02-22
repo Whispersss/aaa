@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+    </div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+    <script type="text/babel">
+        class Main extends React.Component{
+            constructor(params){
+                super(params);
+                this.state={todo1:['吃饭','睡觉','王佩biss']}
+                this.addHandle = this.addHandle.bind(this);
+            }
+
+            addHandle(val){
+                let todo1 = [...this.state.todo1];
+                todo1.push(val);
+                this.setState({
+                    todo1
+                })
+            }
+
+            render(){
+                return(
+                    <div>
+                    <h1>简单的todolist</h1>
+                    <Add addHandle = {this.addHandle} ></Add>
+                    <List todo1={this.state.todo1} ></List>
+                    </div>
+                )
+            }
+
+        }
+
+        class Add extends React.Component{
+            constructor(params) {
+                super(params);
+                this.add = this.add.bind(this);
+            }
+            add(){
+                if(this.myInput.value){
+                this.props.addHandle(this.myInput.value);
+                this.myInput.value = '';
+                }
+                
+            }
+            render(){
+                return(
+                    <div>
+                    <input type='text' ref={input=>{this.myInput = input}} />
+                    <button onClick={this.add} >add</button>
+                    </div>
+                )
+            }
+        }
+ 
+        class List extends React.Component{
+            render(){
+                return(
+                <ul>
+                    {
+                        this.props.todo1.map(function (val,index) {
+                            return <li key={index} > {val} </li>
+                        })
+                    }
+                </ul>
+                )
+            }
+        }
+    
+        ReactDOM.render(<Main></Main>,document.getElementById('root'))
+    
+    
+    </script>
+    <style>
+    ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    
+    
+    </style>
+</body>
+</html>

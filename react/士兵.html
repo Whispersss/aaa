@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+    </div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+    <script type="text/babel">
+
+
+        class Main extends React.Component{
+            constructor(params){
+                super(params);
+                this.state = {
+                    topnum:50,
+                    numA:10,
+                    numB:20
+                }
+                this.add = this.add.bind(this);
+            }
+
+            add(name,val){
+
+                val = parseInt(val);
+                if(this.state.topnum>=val){
+                    this.setState({
+                    topnum:this.state.topnum - val,
+                    ['num'+name]:this.state['num'+name]+val,
+                })
+                }else if(!val){
+                    alert('请输入调兵数量！')
+                }else{
+                    alert('士兵数量不足！')
+                }
+                
+            }
+            
+            render() {
+                return(
+                    <div>
+                        <h1>剩余士兵数量：{this.state.topnum}</h1>
+                        <Soldier name='A' num={this.state.numA} add={this.add} ></Soldier>
+                        <Soldier name='B' num={this.state.numB} add={this.add} ></Soldier>
+                    </div>
+                )
+            }
+        }
+
+        class Soldier extends React.Component{
+            render(){
+                return(
+                    <div>
+                        <h3>将军{this.props.name}有士兵：{this.props.num}</h3>
+                        <input type="number" ref={ input=> {this.myInput = input} }/>
+                        <button onClick={()=>{
+                            this.props.add(this.props.name,this.myInput.value);
+                            this.myInput.value=''}}>
+                            调兵
+                            </button>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(<Main></Main>,document.getElementById('root'))
+    </script>
+</body>
+
+</html>
